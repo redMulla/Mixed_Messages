@@ -1,7 +1,7 @@
 const mixedMessages = {
     badFeelings:['lonely', 'like giving up', 'neglected', 'disturbed'],
     lowSelfEsteem: ['hating yourself', 'blaming everyone', 'screaming out loud'],
-    motivation: ['things will always be right at long last', 'God never forget about his children', 'your future is bright with hard work','you have the power to make evrything right', 'there\'s always light at the end of a tunel']
+    motivation: ['things will always be right at long last', 'God never forget about his children', 'your future is bright with hard work','you have the power to make everything right', 'there\'s always light at the end of a tunel']
 }
 
 const random = num =>{
@@ -14,7 +14,7 @@ let phrases = []
 
 for (let arr in mixedMessages){
     let mixMes = random(mixedMessages[arr].length)
-    console.log(mixMes)
+    
     switch (arr) {
         case 'badFeelings':
             phrases.push(`You are feeling ${mixedMessages[arr][mixMes]}`)
@@ -30,6 +30,6 @@ for (let arr in mixedMessages){
             break;
     }
 }
-console.log(phrases)
+console.log(phrases.join('\n'))
 
 
