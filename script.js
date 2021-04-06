@@ -8,28 +8,31 @@ const random = num =>{
     return Math.floor(Math.random() * num)
 }
 
+const buildPhrases = () => {
 
+    let phrases = []
 
-let phrases = []
-
-for (let arr in mixedMessages){
-    let mixMes = random(mixedMessages[arr].length)
-    
-    switch (arr) {
-        case 'badFeelings':
-            phrases.push(`You are feeling ${mixedMessages[arr][mixMes]}`)
-            break;
-        case 'lowSelfEsteem':
-            phrases.push(`Sometimes you think of ${mixedMessages[arr][mixMes]}`)
-            break;
-        case 'motivation':
-            phrases.push(`But always remember that ${mixedMessages[arr][mixMes]}`)
-             break;
-        default:
-            'error'
-            break;
+    for (let arr in mixedMessages){
+        let mixMes = random(mixedMessages[arr].length)
+        
+        switch (arr) {
+            case 'badFeelings':
+                phrases.push(`You are feeling ${mixedMessages[arr][mixMes]}`)
+                break;
+            case 'lowSelfEsteem':
+                phrases.push(`Sometimes you think of ${mixedMessages[arr][mixMes]}`)
+                break;
+            case 'motivation':
+                phrases.push(`But always remember that ${mixedMessages[arr][mixMes]}`)
+                break;
+            default:
+                'error'
+                break;
+        }
     }
+    return phrases.join('\n');
 }
-console.log(phrases.join('\n'))
 
+
+console.log(buildPhrases());
 
